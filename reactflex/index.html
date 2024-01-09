@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox using React</title>
+    <style>
+        #parent{
+            width: 900px;
+            height: 180px;
+            background-color: rgb(255,228,196);
+            display: flex;
+            justify-content: safe;
+            margin: auto;
+            border: 1px solid black;
+            gap: 17px;
+            font-size: 35px; 
+          
+           
+            
+        }
+        .child{
+            margin-left: 100px;
+            
+        }
+       
+         
+        
+        .child1{
+            background-color:red ; 
+            height: 100px;
+            width:100px;
+            margin-top: 40px;
+            border: 1.5px solid black;
+            
+
+            
+            
+        }
+        .child2{
+            background-color:yellow ;
+            height: 100px;
+            width:100px;
+            margin-top: 40px;
+            border: 1.5px solid black;
+           
+        }
+        .child3{
+            background-color:green ;
+            height: 100px;
+            width:100px;
+            margin-top: 40px;
+            border: 1.5px solid black;
+          
+        }
+        .child4{
+            background-color:purple ;
+            height: 100px;
+            width:100px;
+            margin-top: 40px;
+            border: 1.5px solid black;
+           
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="root"></div>
+    
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>    
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel" >
+
+     
+ 
+const element=React.createElement("div",{id:"parent"},"Parent"
+,[
+    React.createElement("div",{className:"child"}),
+React.createElement("div",{className:"child1"},1),
+React.createElement("div",{ className:"child2"},2),
+React.createElement("div",{className:"child3"},3),
+React.createElement("div",{className:"child4"},4)
+]
+)
+ 
+ 
+let rootElement=ReactDOM.createRoot(document.getElementById("root"));
+rootElement.render(element)
+
+ 
+ 
+</script>
+
+</html>
